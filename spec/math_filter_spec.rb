@@ -12,6 +12,11 @@ describe MathFilter do
       expect(m.filter("a")).to eq "a"
     end
 
+    xit 'returns "+" if passed "+"' do
+      m = MathFilter.new
+      expect(m.filter("+")).to eq "+"
+    end
+
     it 'returns "2" if passed "2"' do
       m = MathFilter.new
       expect(m.filter("2")).to eq "2"
@@ -20,6 +25,12 @@ describe MathFilter do
     it 'returns "2" if passed "2+"' do
       m = MathFilter.new
       expect(m.filter("2+")).to eq "2"
+    end
+
+
+    it 'returns " 2" if passed " 2+"' do
+      m = MathFilter.new
+      expect(m.filter(" 2+")).to eq " 2"
     end
 
     xit 'returns "3" if passed "2+1"' do
