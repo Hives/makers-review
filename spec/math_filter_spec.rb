@@ -6,5 +6,10 @@ describe MathFilter do
       m = MathFilter.new
       expect(m.filter("")).to eq ""
     end
+
+    it 'returns "a" if passed "a"' do
+      m = MathFilter.new
+      expect(m.filter("a")).to eq "a"
+    end
   end
 end
