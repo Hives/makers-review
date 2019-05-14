@@ -17,9 +17,14 @@ describe MathFilter do
       expect(m.filter("2")).to eq "2"
     end
 
-    it 'returns "2+" if passed "2+"' do
+    it 'returns "2" if passed "2+"' do
       m = MathFilter.new
-      expect(m.filter("2+")).to eq "2+"
+      expect(m.filter("2+")).to eq "2"
+    end
+
+    xit 'returns "3" if passed "2+1"' do
+      m = MathFilter.new
+      expect(m.filter("2+1")).to eq "3"
     end
   end
 end
